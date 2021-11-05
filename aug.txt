@@ -1,0 +1,10 @@
+## 사용되는 변수는 주석으로 설명 되어 있습니다. 
+
+1. 필요한 pip list 들은 requirments.txt에 있습니다
+    python명령어 : pip install -r requirments.txt  를 사용하여 필요한 pip를 install 합니다.
+
+
+2.  변수를 필요에 맞게 조정한 뒤 
+    명령어 : 파이썬 경로 파일 경로\aug.py -i 이미지경로 -o 저장될경로 를 사용하면 
+
+    ex) python aug.py -i image1.bmp -o output 
