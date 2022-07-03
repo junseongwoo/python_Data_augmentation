@@ -71,13 +71,14 @@ class WindowClass(QMainWindow, form_ui):
         
         self.img_path = img[0]
         checkFile = pathlib.Path(self.img_path)
+        print(checkFile.stem)
 
         if checkFile.suffix not in format :
             print("이미지 파일이 아닙니다!")
 
         self.ImageViewer = QPixmap()
         self.ImageViewer.load(self.img_path) 
-        self.ImageViewer = self.ImageViewer.scaled(391, 471)
+        self.ImageViewer = self.ImageViewer.scaled(391, 550)
         self.lblImage.setPixmap(self.ImageViewer)
     
     def StartGen():

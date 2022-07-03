@@ -11,7 +11,7 @@ import os
 # prefix: image filename의 prefix
 
 class GeneratorImage():
-    def Generator_Image(img, count, savePath, rotation, width, height, shear, zoom, horizontal_flip = False):
+    def Generator_Image(img, count, savePath, saveFileName, rotation, width, height, shear, zoom, horizontal_flip = False):
         image = load_img(img)
         image = img_to_array(image)
         image = np.expand_dims(image, axis=0)
@@ -30,7 +30,7 @@ class GeneratorImage():
             img,
             batch_size=1,
             save_to_dir="/"+savePath,
-            save_prefix='Result_Image',
+            save_prefix=saveFileName,
             save_format="bmp",
             )
 
