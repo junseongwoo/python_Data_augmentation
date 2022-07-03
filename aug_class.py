@@ -29,7 +29,7 @@ class GeneratorImage():
         imageGen = aug.flow(
             img,
             batch_size=1,
-            save_to_dir=savePath,
+            save_to_dir="/"+savePath,
             save_prefix='Result_Image',
             save_format="bmp",
             )
