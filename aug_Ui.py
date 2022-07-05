@@ -50,9 +50,6 @@ class WindowClass(QMainWindow, form_ui):
         self.horizontal_flip = True
         self.count = 10 
     
-    '''
-    to do list 
-    '''
     def ConfigSave(self):
         save_path = QFileDialog.getSaveFileName(self, '', filter='txt files (*.txt)')[0]
         param_item = self.TWConfig.topLevelItem(0)

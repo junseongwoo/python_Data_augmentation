@@ -558,7 +558,7 @@
     </font>
    </property>
    <property name="title">
-    <string>Parameter</string>
+    <string>Config</string>
    </property>
   </widget>
   <widget class="QComboBox" name="CboFlip">
