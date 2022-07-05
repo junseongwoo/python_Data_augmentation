@@ -26,16 +26,22 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Augmentation Tool</string>
+   <string>Data Augmentation Tool</string>
   </property>
   <widget class="QPushButton" name="BtnConfigSave">
    <property name="geometry">
     <rect>
-     <x>780</x>
+     <x>670</x>
      <y>50</y>
      <width>81</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>Save</string>
@@ -44,16 +50,16 @@
   <widget class="QPushButton" name="BtnGenStart">
    <property name="geometry">
     <rect>
-     <x>890</x>
+     <x>880</x>
      <y>50</y>
-     <width>141</width>
+     <width>151</width>
      <height>28</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <weight>50</weight>
-     <bold>false</bold>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -183,6 +189,12 @@
      <height>28</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="text">
     <string>Image Load</string>
    </property>
@@ -204,6 +216,9 @@
    </property>
    <property name="maximum">
     <number>180</number>
+   </property>
+   <property name="value">
+    <number>0</number>
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
@@ -290,8 +305,8 @@
     </property>
     <property name="font">
      <font>
-      <weight>50</weight>
-      <bold>false</bold>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -511,11 +526,17 @@
   <widget class="QPushButton" name="BtnConfigLoad">
    <property name="geometry">
     <rect>
-     <x>690</x>
+     <x>580</x>
      <y>50</y>
      <width>81</width>
      <height>28</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>Load</string>
@@ -524,9 +545,9 @@
   <widget class="QGroupBox" name="groupBox_2">
    <property name="geometry">
     <rect>
-     <x>680</x>
+     <x>570</x>
      <y>25</y>
-     <width>191</width>
+     <width>281</width>
      <height>61</height>
     </rect>
    </property>
@@ -611,7 +632,7 @@
       <string>Width Shift</string>
      </property>
      <property name="text">
-      <string>0</string>
+      <string>0.0</string>
      </property>
     </item>
     <item>
@@ -619,7 +640,7 @@
       <string>Height Shift</string>
      </property>
      <property name="text">
-      <string>0</string>
+      <string>0.0</string>
      </property>
     </item>
     <item>
@@ -627,7 +648,7 @@
       <string>Shear Range</string>
      </property>
      <property name="text">
-      <string>0</string>
+      <string>0.0</string>
      </property>
     </item>
     <item>
@@ -635,7 +656,7 @@
       <string>Zoom Range</string>
      </property>
      <property name="text">
-      <string>0</string>
+      <string>0.0</string>
      </property>
     </item>
     <item>
@@ -664,6 +685,25 @@
     </property>
    </item>
   </widget>
+  <widget class="QPushButton" name="BtnConfigChange">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>50</y>
+     <width>81</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Change</string>
+   </property>
+  </widget>
   <zorder>groupBox_2</zorder>
   <zorder>groupBox</zorder>
   <zorder>BtnConfigSave</zorder>
@@ -691,6 +731,7 @@
   <zorder>BtnConfigLoad</zorder>
   <zorder>CboFlip</zorder>
   <zorder>TWConfig</zorder>
+  <zorder>BtnConfigChange</zorder>
  </widget>
  <resources/>
  <connections/>

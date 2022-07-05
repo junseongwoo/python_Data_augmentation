@@ -3,6 +3,7 @@
 from keras_preprocessing.image import ImageDataGenerator
 from keras_preprocessing.image import img_to_array
 from keras_preprocessing.image import load_img
+import pathlib
 import numpy as np
 import os
 
@@ -11,7 +12,8 @@ import os
 # prefix: image filename의 prefix
 
 class GeneratorImage():
-    def Generator_Image(img, count, savePath, saveFileName, rotation, width, height, shear, zoom, horizontal_flip = False):
+    def Generator_Image(img, savePath,count ,rotation, width, height, shear, zoom, horizontal_flip):
+        SavefileNmae = pathlib.Path(img).stem
         image = load_img(img)
         image = img_to_array(image)
         image = np.expand_dims(image, axis=0)
@@ -27,10 +29,10 @@ class GeneratorImage():
             )
 
         imageGen = aug.flow(
-            img,
+            image,
             batch_size=1,
-            save_to_dir="/"+savePath,
-            save_prefix=saveFileName,
+            save_to_dir=savePath,
+            save_prefix=SavefileNmae,
             save_format="bmp",
             )
 
