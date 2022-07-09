@@ -19,11 +19,11 @@ class GeneratorImage():
         image = np.expand_dims(image, axis=0)
 
         aug = ImageDataGenerator(
-            rotation_range=rotation,      # 회전의 각도 범위 제어, 무작위로 ± 30도 회전
-            width_shift_range=width,      # 수평 및 수직 이동 변수, 이 경우 30% 
+            rotation_range=rotation,           # 회전의 각도 범위 제어, 무작위로 ± 30도 회전
+            width_shift_range=width,           # 수평 및 수직 이동 변수, 이 경우 30% 
             height_shift_range=height,  
-            shear_range=shear,       # 이미지를 기울일 수 있는 라디안으로 시계 반대 방향`의 각도 제어
-            zoom_range=zoom,         # [1-zoom_range, 1 + zoom_range] 값의 균일 한 분포에 따라 이미지를 "확대" 또는 "축소"할 수 있는 포인트 값
+            shear_range=shear,                 # 이미지를 기울일 수 있는 라디안으로 시계 반대 방향`의 각도 제어
+            zoom_range=zoom,                   # [1-zoom_range, 1 + zoom_range] 값의 균일 한 분포에 따라 이미지를 "확대" 또는 "축소"할 수 있는 포인트 값
             horizontal_flip=horizontal_flip,   # 수평으로 전환될 여부를 체크 
             fill_mode="nearest",
             )
@@ -43,7 +43,6 @@ class GeneratorImage():
         # 예제 10 개에 도달하면 스크립트 실행을 중지합니다.
         for image in imageGen:
             total += 1
-            print(image)
             
             if total == count: # 변환된 이미지의 갯수 지정 
                 break
