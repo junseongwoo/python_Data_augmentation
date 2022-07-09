@@ -43,6 +43,7 @@ class GeneratorImage():
         # 예제 10 개에 도달하면 스크립트 실행을 중지합니다.
         for image in imageGen:
             total += 1
-
+            print(image)
+            
             if total == count: # 변환된 이미지의 갯수 지정 
                 break
